@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy · untangle</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #02060E;
+    --bg2: #060D1A;
+    --navy: #091A4A;
+    --blue-mid: #0929AD;
+    --text: rgba(224, 242, 254, 0.92);
+    --text-muted: rgba(180, 210, 240, 0.55);
+    --accent: rgba(152, 212, 250, 0.9);
+    --accent-soft: rgba(152, 212, 250, 0.15);
+    --glass-bg: rgba(9, 25, 60, 0.45);
+    --glass-border: rgba(152, 212, 250, 0.12);
+    --serif: 'EB Garamond', Georgia, serif;
+    --sans: 'DM Sans', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    font-weight: 300;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.4;
+  }
+
+  .orb {
+    position: fixed;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+    filter: blur(80px);
+    opacity: 0.18;
+  }
+  .orb-1 { width: 600px; height: 600px; background: radial-gradient(circle, #0929AD, transparent 70%); top: -200px; left: -100px; }
+  .orb-2 { width: 400px; height: 400px; background: radial-gradient(circle, #1a4a8a, transparent 70%); bottom: 10%; right: -80px; }
+
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 1.25rem 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(2, 6, 14, 0.6);
+    backdrop-filter: blur(12px);
+    border-bottom: 0.5px solid var(--glass-border);
+  }
+
+  .nav-logo {
+    font-family: var(--serif);
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--accent);
+    letter-spacing: 0.02em;
+    text-decoration: none;
+  }
+
+  .nav-back {
+    font-size: 0.82rem;
+    font-weight: 400;
+    color: var(--text-muted);
+    text-decoration: none;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-back:hover { color: var(--accent); }
+
+  main {
+    position: relative;
+    z-index: 1;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 120px 2rem 100px;
+  }
+
+  .page-label {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border: 1px solid var(--glass-border);
+    border-radius: 99px;
+    padding: 4px 14px;
+    margin-bottom: 1.5rem;
+  }
+
+  h1 {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 400;
+    color: var(--text);
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+
+  .meta {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    margin-bottom: 3rem;
+  }
+
+  .summary-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 1.5rem 1.75rem;
+    margin-bottom: 3rem;
+    font-size: 0.95rem;
+    color: var(--text);
+  }
+
+  h2 {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: var(--accent);
+    margin: 2.5rem 0 0.75rem;
+  }
+
+  p {
+    font-size: 0.93rem;
+    color: rgba(200, 225, 245, 0.8);
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    padding-left: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  li {
+    font-size: 0.93rem;
+    color: rgba(200, 225, 245, 0.8);
+    margin-bottom: 0.5rem;
+  }
+
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  strong { color: var(--text); font-weight: 500; }
+
+  hr {
+    border: none;
+    border-top: 1px solid var(--glass-border);
+    margin: 3rem 0;
+  }
+
+  footer {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+    z-index: 1;
+  }
+</style>
+</head>
+<body>
+
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+
+<nav>
+  <a href="/" class="nav-logo">untangle</a>
+  <a href="/" class="nav-back">← Back</a>
+</nav>
+
+<main>
+  <span class="page-label">Privacy Policy</span>
+  <h1>Your journal stays yours.</h1>
+  <p class="meta">Last updated: April 18, 2026 &nbsp;·&nbsp; App version 1.3.0</p>
+
+  <div class="summary-card">
+    <strong>Short version:</strong> untangle is a personal journal. Your voice recordings, transcripts, photos,
+    and notes live on your device. We never sell your data. Audio and text are sent to AI providers
+    solely to generate your summaries and insights — nothing is stored on their servers beyond the
+    duration of each request.
+  </div>
+
+  <h2>1. Who we are</h2>
+  <p>
+    untangle is an independently developed app by Priya Singh. If you have any
+    questions about this policy, email us at
+    <a href="mailto:privacy@liveuntangle.com">privacy@liveuntangle.com</a>.
+  </p>
+
+  <h2>2. What data untangle collects</h2>
+
+  <p><strong>Voice recordings</strong><br>
+  When you use the microphone, untangle records audio and stores it temporarily on your device.
+  The audio is sent to OpenAI Whisper (via our secure server) to produce a text transcript.
+  The audio file is deleted from our server immediately after transcription. The resulting
+  transcript is stored on your device only.</p>
+
+  <p><strong>Journal entries and transcripts</strong><br>
+  All journal entries, transcripts, summaries, and insights are stored locally on your device
+  using encrypted on-device storage. We do not sync your journal to any cloud database.
+  We do not have access to your journal content.</p>
+
+  <p><strong>Photos</strong><br>
+  Photos you attach to journal entries are stored locally on your device. If a photo is included
+  in a summary request, it is sent to Anthropic Claude (via our secure server) solely to generate
+  your summary, and is not retained by us or Anthropic beyond that request.</p>
+
+  <p><strong>Account &amp; email address</strong><br>
+  If you sign in, your email address is stored by Supabase Authentication solely to identify
+  your account session. We do not use it for marketing.</p>
+
+  <p><strong>Wellbeing &amp; mood data</strong><br>
+  If you use wellbeing check-ins, your mood and distress scores are stored locally on your device
+  and are never transmitted to our servers.</p>
+
+  <p><strong>Expense data</strong><br>
+  If you log expenses, amounts, categories, and descriptions are stored locally on your device only.</p>
+
+  <p><strong>ElevenLabs voice synthesis</strong><br>
+  If you use the Call feature, the text of your summary is sent to ElevenLabs (via our secure server)
+  to generate a spoken audio response. The text is not retained by ElevenLabs beyond the duration
+  of the request.</p>
+
+  <p><strong>Wisdom Shorts</strong><br>
+  The Wisdom Shorts feed is loaded from our Supabase database. This request contains no personal
+  information — only a request for the public content list.</p>
+
+  <p><strong>What we do NOT collect</strong></p>
+  <ul>
+    <li>We do not collect your name, phone number, location, or contacts</li>
+    <li>We do not use advertising SDKs or sell your data</li>
+    <li>We do not build profiles or share data with third parties for marketing</li>
+    <li>We do not have access to your journal entries or recordings</li>
+    <li>We do not collect device identifiers (IMEI, Android ID)</li>
+  </ul>
+
+  <h2>3. Third-party services we use</h2>
+
+  <p>To provide AI-powered features, your content is processed by the following services.
+  Each request is proxied through our server — your device never contacts these APIs directly,
+  and API keys are never embedded in the app.</p>
+
+  <ul>
+    <li>
+      <strong>OpenAI (Whisper)</strong> — audio transcription.<br>
+      <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener">OpenAI Privacy Policy</a>
+    </li>
+    <li>
+      <strong>Anthropic (Claude)</strong> — daily summaries and journal insights.<br>
+      <a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener">Anthropic Privacy Policy</a>
+    </li>
+    <li>
+      <strong>ElevenLabs</strong> — text-to-speech for the Call feature.<br>
+      <a href="https://elevenlabs.io/privacy" target="_blank" rel="noopener">ElevenLabs Privacy Policy</a>
+    </li>
+    <li>
+      <strong>Supabase</strong> — hosts the Wisdom Shorts database and our AI proxy functions.<br>
+      <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase Privacy Policy</a>
+    </li>
+    <li>
+      <strong>RevenueCat</strong> — manages in-app subscription purchases. Receives your subscription
+      status and purchase events.<br>
+      <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat Privacy Policy</a>
+    </li>
+    <li>
+      <strong>PostHog</strong> — product analytics. Receives anonymised event names (e.g. "recording_started",
+      "summary_viewed") and your user ID. No journal content is ever included.<br>
+      <a href="https://posthog.com/privacy" target="_blank" rel="noopener">PostHog Privacy Policy</a>
+    </li>
+  </ul>
+
+  <h2>4. Permissions</h2>
+  <ul>
+    <li><strong>Microphone</strong> — to record your voice for journal entries.</li>
+    <li><strong>Camera &amp; Photo Library</strong> — to attach photos to journal entries.</li>
+    <li><strong>Notifications</strong> — to alert you when your daily summary is ready.</li>
+  </ul>
+
+  <h2>5. Data retention and deletion</h2>
+  <p>
+    All your journal data (entries, transcripts, summaries, photos) is stored on your device.
+    You can delete individual entries from within the app at any time. Uninstalling the app
+    removes all locally stored data.
+  </p>
+  <p>
+    AI requests are not retained by us or our AI providers beyond the time required to generate
+    a response (typically a few seconds).
+  </p>
+
+  <h2>6. Children's privacy</h2>
+  <p>
+    untangle is not directed at children under 13. We do not knowingly collect any information
+    from children under 13.
+  </p>
+
+  <h2>7. Changes to this policy</h2>
+  <p>
+    If we make material changes to this policy, we will update the "Last updated" date at the top
+    of this page and, where appropriate, notify you within the app.
+  </p>
+
+  <h2>8. Contact</h2>
+  <p>
+    Questions or requests about your privacy?<br>
+    Email: <a href="mailto:privacy@liveuntangle.com">privacy@liveuntangle.com</a>
+  </p>
+
+  <hr>
+</main>
+
+<footer>
+  &copy; 2026 untangle. All rights reserved. &nbsp;·&nbsp;
+  <a href="/">liveuntangle.com</a>
+</footer>
+
+</body>
+</html>
